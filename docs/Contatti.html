@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Contatti</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 20px;
+      line-height: 2em;
+      color: #000000;
+      background-image: url("immagini/sfondo-concessionaria.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #0000009f;
+      padding-left: 0;
+    }
+
+    h1 {
+      border-radius: 25px;
+      text-align: center;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      border-radius: 25px;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 90px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #111;
+    }
+
+    p.round3 {
+      border: 6px solid rgb(0, 0, 0);
+      border-radius: 12px;
+      padding: 5px;
+    }
+
+    img {
+      border-radius: 25px;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="Homepage.html"><i>Home page</i></a></li>
+    <li><a href="Vetture.html"><i>Vetture</i></a></li>
+    <li><a href="Sede.html"><i>Sede</i></a></li>
+    <li><a href="Contatti.html"><i>Contatti</i></a></li>
+  </ul>
+
+  <h1 align="centre" style="border-style: inset; border-color: gray gray gray gray; border-width:10px; width:200px; height:60px"><center><i>Contatti</i></center></h1>
+  <p class="round3">
+    Benvenuti nella sezione Contatti della nostra concessionaria auto. 
+    Qui troverete tutti i modi per mettervi in contatto con noi e iniziare il 
+    vostro viaggio alla scoperta del vostro veicolo ideale. Siamo pronti 
+    ad ascoltarvi e a rispondere a tutte le vostre domande.
+  </p>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      border-radius: 20px;
+    }
+
+    input[type=submit] {
+      background-color: #000000;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 25px;
+    }
+
+    input[type=submit]:hover {
+      background-color: #444444;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+      .column,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <div style="text-align:center">
+      <h2>Contattaci</h2>
+      <p>Usa questo modulo per contattarci</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="immagini/contatti.jpg" style="width:100%">
+        <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+        <lord-icon
+          type="button"
+          onclick="alert('Numero telefonico: +39 402 312 5982')"
+          src="https://cdn.lordicon.com/rsvfayfn.json"
+          trigger="click"
+          state="k_morph-phone-hang-up"
+          style="width:80px;height:90px">
+        </lord-icon>
+        <lord-icon
+          type="button"
+          onclick="alert('mail: concessionaria.ruscica@gmail.com')"
+          src="https://cdn.lordicon.com/nzixoeyk.json"
+          trigger="morph"
+          style="width:90px;height:90px">
+        </lord-icon>
+      </div>
+      <div class="column">
+        <form>
+          <label for="fname">Nome</label>
+          <input type="text" id="fname" name="Nome" placeholder="Il tuo nome">
+          <label for="lname">Cognome</label>                             
+          <input type="text" id="lname" name="Cognome" placeholder="Il tuo cognome">
+          <label for="country">Paese</label>
+          <select id="country" name="country">
+            <option>Italia</option>
+            <option>San Marino</option>
+            <option>America</option>
+          </select>
+          <label for="subject">Maggiori informazioni</label>
+          <textarea id="subject" name="subject" placeholder="Inserisci testo" style="height:170px"></textarea>
+          <input type="submit" onclick="alert('Richiesta avvenuta con successo! Risponderemo il prima possibile')" value="Invia">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Home page</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 20px;
+      line-height: 2em;
+      color: #000000;
+      background-image: url("immagini/sfondo-concessionaria.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #0000009f;
+      padding-left: 0;
+    }
+
+    h1 {
+      border-radius: 25px;
+      text-align: center;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      border-radius: 25px;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 90px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #111;
+    }
+
+    p.bordo {
+      border: 6px solid rgb(0, 0, 0);
+      border-radius: 12px;
+      padding: 5px;
+    }
+
+    .mySlides {
+      display: none;
+      opacity: 0;
+      transition: 2s ease;
+      border-radius: 25px;
+      margin: auto;
+    }
+
+    .button {
+      border-radius: 10px;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      height: 200px;
+      width: 400px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      background-size: cover;
+      line-height: 290px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 3;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="Homepage.html"><i>Home page</i></a></li>
+    <li><a href="Vetture.html"><i>Vetture</i></a></li>
+    <li><a href="sede.html"><i>Sede</i></a></li>
+    <li><a href="Contatti.html"><i>Contatti</i></a></li>
+  </ul>
+
+  <h1 align="centre" style="border-style: inset; border-color:gray gray gray gray; border-width:10px; width:225px; height:50px"><center><i>Homepage</i></center></h1>
+
+  <h1><center>Concessionaria auto Rusci di Verona</center></h1>
+
+  <p class="bordo">
+    Benvenuti nella nostra Concessionaria Automobilistica di eccellenza! Siamo il vostro punto di riferimento per la scelta di auto nuove
+    e usate di alta qualità. Con anni di esperienza nel settore, offriamo una vasta gamma di veicoli, dai modelli più sportivi ai veicoli
+    familiari sicuri e affidabili. La nostra missione è soddisfare al meglio le vostre esigenze di mobilità, fornendo servizi personalizzati
+    e un team di professionisti pronti a guidarvi nella vostra scelta. Esplorate il nostro sito web virtuale e scoprite l'auto dei vostri sogni.
+    Con noi, il vostro viaggio inizia qui.
+  </p>
+
+  <div style="max-width: 500px">
+    <img class="mySlides" src="immagini/Maserati.webp" style="width: 1200px; height: 700px;">
+    <img class="mySlides" src="immagini/Bugatti.avif" style="width: 1200px; height: 700px;">
+    <img class="mySlides" src="immagini/Aston-martin.webp" style="width: 1200px; height: 700px;">
+  </div>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        x[i].style.opacity = "0";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1;
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(function () {
+        x[myIndex - 1].style.opacity = "1";
+      }, 50);
+      setTimeout(carousel, 4000);
+    }
+  </script>
+
+  <h2>Dove ci troviamo</h2>
+  <center>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89605.01637408863!2d10.910129295654755!3d45.426341208929884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f5f68699be0e3%3A0x53f85a636882595b!2sVerona%20VR!5e0!3m2!1sit!2sit!4v1696264379162!5m2!1sit!2sit" 
+    width="700" height="300" style="border-radius: 25px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </center>
+
+  <h2>Collegamenti</h2>
+  <a href="Contatti.html">
+    <button class="button" style="background-image: url('immagini/contatti.jpg');"><span>Contatti</span></button>
+  </a>
+
+  <a href="Vetture.html">
+    <button class="button" style="background-image: url('immagini/Vetture.webp');"><span>Vetture</span></button>
+  </a>
+
+  <a href="Sede.html">
+    <button class="button" style="background-image: url('immagini/Sede.jpeg');"><span>Sede</span></button>
+  </a>
+</body>
+</html>

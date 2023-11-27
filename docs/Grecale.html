@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grecale</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 20px;
+      line-height: 2em;
+      color: #000000;
+      background-image: url("immagini/sfondo-concessionaria.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #0000009f;
+      padding-left: 0;
+    }
+
+    h1 {
+      border-radius: 25px;
+      text-align: center;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      border-radius: 25px;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 90px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #111;
+    }
+
+    p.bordo {
+      border: 6px solid rgb(0, 0, 0);
+      border-radius: 12px;
+      padding: 5px;
+      width: 45%;
+     
+   
+    }
+
+    .lorenzo-slides {
+      display: none;
+      opacity: 0;
+      transition: 2s ease;
+      border-radius: 25px;
+      margin: auto;
+     
+    }
+
+    .button {
+      border-radius: 10px;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      height: 200px;
+      width: 400px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      background-size: cover;
+      line-height: 290px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 3;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="Homepage.html"><i>Home page</i></a></li>
+    <li><a href="Vetture.html"><i>Vetture</i></a></li>
+    <li><a href="sede.html"><i>Sede</i></a></li>
+    <li><a href="Contatti.html"><i>Contatti</i></a></li>
+  </ul>
+<br>
+<br>
+<br>
+<center>
+<p class="bordo">  
+ <strong>Pura potenza</strong> <br> Il tuo comfort, la nostra missione. Il nuovo SUV Grecale 
+ è il best in class in termini di spazio nell'abitacolo, il volume è massimizzato grazie al design snello e
+  funzionale. Spazioso in tutte le dimensioni e con il touch screen posteriore da 6,5" per il sistema di 
+  climatizzazione a 3 zone, anche i passeggeri dei sedili posteriori possono vivere un’esperienza eccezionale a bordo. </p>
+<div style="max-width: 500px"> </center>
+  <img class="lorenzo-slides" src="immagini/Grecale1.jpg" style="width: 1000px; height: 500px;"> 
+  <img class="lorenzo-slides" src="immagini/Grecale2.jpg" style="width: 1000px; height: 500px;">
+  <img class="lorenzo-slides" src="immagini/Grecale3.jpg" style="width: 1000px; height: 500px;">
+
+     <script>
+      var myIndex = 0;
+      carousel();
+  
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("lorenzo-slides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+          x[i].style.opacity = "0";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(function () {
+          x[myIndex - 1].style.opacity = "1";
+        }, 50);
+        setTimeout(carousel, 4000);
+      }
+    </script>
+    
+  </div>
+  
